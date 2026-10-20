@@ -2,6 +2,8 @@
 
 A responsive, accessible personal portfolio for Evans Onoka Aboge, Senior Software Engineer focused on AI infrastructure, distributed systems, and developer platforms.
 
+**Live site:** [onokaev.github.io/my-portfolio](https://onokaev.github.io/my-portfolio/)
+
 ## Run locally
 
 The site has no build step or runtime dependencies.

@@ -1,0 +1,63 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editors and local tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets.*
+
+# Private source material
+*resume*.json
+*.local.json
+private/
+data/
+
+# Dependencies and package-manager caches
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Build, test, and generated output
+dist/
+build/
+out/
+coverage/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+playwright-report/
+test-results/
+*.log
+
+# Local servers and deployment tools
+.vercel/
+.netlify/
+.wrangler/
+*.pid
+
+# Temporary files and archives
+tmp/
+temp/
+*.tmp
+*.bak
+*.zip
+*.tar
+*.tar.gz

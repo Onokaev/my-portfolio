@@ -327,7 +327,8 @@ h2 em {
 .impact,
 .work,
 .experience,
-.capabilities {
+.capabilities,
+.approach {
   padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 4vw, 4.5rem);
 }
 
@@ -527,6 +528,21 @@ h2 em {
   font-size: 0.83rem;
 }
 
+.case-main .case-signal {
+  grid-column: 1 / -1;
+  grid-row: auto;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.case-signal strong {
+  margin-right: 0.4rem;
+  color: var(--ink);
+  font: 500 2rem var(--serif);
+}
+
 .evidence-links {
   display: flex;
   grid-column: 1 / -1;
@@ -639,6 +655,49 @@ h2 em {
   color: var(--muted);
 }
 
+.approach {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.approach .section-index {
+  color: rgba(242, 240, 233, 0.45);
+}
+
+.principle-grid {
+  display: grid;
+  max-width: 1450px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(242, 240, 233, 0.22);
+  border-left: 1px solid rgba(242, 240, 233, 0.22);
+}
+
+.principle-grid li {
+  min-height: 22rem;
+  padding: 2rem;
+  border-right: 1px solid rgba(242, 240, 233, 0.22);
+  border-bottom: 1px solid rgba(242, 240, 233, 0.22);
+}
+
+.principle-grid span {
+  color: var(--lime);
+  font: 0.68rem var(--mono);
+}
+
+.principle-grid h3 {
+  margin: 5rem 0 1.2rem;
+  font: 500 1.7rem var(--serif);
+}
+
+.principle-grid p {
+  margin-bottom: 0;
+  color: rgba(242, 240, 233, 0.62);
+  font-size: 0.86rem;
+}
+
 .contact {
   padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 4vw, 4.5rem) 3rem;
   color: var(--paper);
@@ -675,6 +734,18 @@ h2 em {
   border-color: var(--paper);
 }
 
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-resume-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .contact-footer {
   display: flex;
   max-width: 1450px;
@@ -697,6 +768,182 @@ h2 em {
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+/* Résumé */
+.resume-page {
+  background: var(--paper);
+}
+
+.resume-hero {
+  padding: 10rem clamp(1.25rem, 8vw, 10rem) 5rem;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at 80% 30%, rgba(200, 255, 69, 0.1), transparent 25%),
+    var(--ink);
+}
+
+.resume-hero-inner {
+  position: relative;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.resume-hero h1 {
+  max-width: 950px;
+  margin: 0 0 1rem;
+  font-size: clamp(3.8rem, 8vw, 8rem);
+}
+
+.resume-deck {
+  color: var(--lime);
+  font: 500 clamp(1.3rem, 2.5vw, 2.3rem) var(--serif);
+}
+
+.resume-contact {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  color: rgba(242, 240, 233, 0.7);
+  font: 0.72rem var(--mono);
+}
+
+.resume-back {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font: 0.72rem var(--mono);
+}
+
+.resume-layout {
+  display: grid;
+  max-width: 1450px;
+  grid-template-columns: minmax(10rem, 0.6fr) minmax(0, 3fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  margin: auto;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 4vw, 4.5rem);
+}
+
+.resume-rail {
+  align-self: start;
+  position: sticky;
+  top: 2rem;
+}
+
+.resume-rail nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+}
+
+.resume-section {
+  padding: 0 0 clamp(4rem, 8vw, 8rem);
+}
+
+.resume-section + .resume-section {
+  padding-top: clamp(4rem, 8vw, 8rem);
+  border-top: 1px solid var(--line);
+}
+
+.resume-section h2 {
+  margin-bottom: 3rem;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.resume-summary {
+  max-width: 60rem;
+  font: 500 clamp(1.3rem, 2.2vw, 1.9rem) / 1.5 var(--serif);
+}
+
+.skill-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.skill-list div {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.8fr) 2fr;
+  gap: 2rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-list dt {
+  font-weight: 700;
+}
+
+.skill-list dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resume-role {
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.resume-role > header,
+.resume-education {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.resume-role h3,
+.resume-education h3 {
+  margin-bottom: 0.2rem;
+  font: 500 1.8rem var(--serif);
+}
+
+.resume-role header p,
+.resume-education p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.resume-date {
+  flex: 0 0 auto;
+  font: 0.66rem var(--mono) !important;
+}
+
+.resume-role li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.resume-role li::marker {
+  color: var(--orange);
+}
+
+.resume-role li a {
+  font-weight: 600;
+  text-decoration-color: var(--orange);
+}
+
+.resume-tech {
+  margin: 1.8rem 0 0;
+  padding: 1rem 1.2rem;
+  color: var(--muted);
+  background: var(--paper-warm);
+  font-size: 0.78rem;
+}
+
+.resume-end-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .js .reveal {
@@ -784,6 +1031,26 @@ h2 em {
 
   .metric-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .principle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-rail {
+    position: static;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .resume-rail nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
   }
 
   .metric:nth-child(2) {
@@ -885,6 +1152,44 @@ h2 em {
 
   .case-outcomes {
     grid-template-columns: 1fr;
+  }
+
+  .principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-grid li {
+    min-height: auto;
+  }
+
+  .principle-grid h3 {
+    margin-top: 3rem;
+  }
+
+  .resume-hero {
+    padding-top: 8.5rem;
+  }
+
+  .resume-back {
+    position: static;
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
+
+  .skill-list div {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .resume-role > header,
+  .resume-education,
+  .resume-end-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resume-role ul {
+    padding-left: 1.3rem;
   }
 
   .timeline-item,
